@@ -52,7 +52,7 @@ public extension String {
             let start = self.characters.index(self.startIndex, offsetBy: integerRange.lowerBound)
             let end = self.characters.index(self.startIndex, offsetBy: integerRange.upperBound)
             let range = start..<end
-            return self[range]
+            return String(self[range])
         }
     }
     
@@ -61,7 +61,7 @@ public extension String {
         get {
             let startIndex =  self.index(self.startIndex, offsetBy: r.lowerBound)
             let endIndex = self.index(startIndex, offsetBy: r.upperBound - r.lowerBound)
-            return self[startIndex...endIndex]
+            return String(self[startIndex...endIndex])
         }
     }
 }
